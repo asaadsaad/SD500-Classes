@@ -22,7 +22,7 @@ storage.addItem("lastname", "Saad");
 console.log(storage.getData()); // [ { firstname: "Asaad" }, { lastname: "Saad" } ]
 
 storage.removeItem("lastname");
-console.log(storage.getStorage()); // { data: [ { firstname: "Asaad" } ]}
+console.log(storage.getData()); // [ { firstname: "Asaad" } ]
 
 storage.updateItem("firstname", "Theo");
 console.log(storage.getItem('firstname')); // Theo

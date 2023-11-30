@@ -1,6 +1,6 @@
 # SD500-Classes
 
-Complete the code for the `MyStorage` class that will be used to add, read, update, and remove key-value pairs in the `state` immutable private property.
+Complete the code for the `MyStorage` class that will be used to add, read, update, and remove key-value pairs in the `state` immutable private property. Some methods return a `boolean` to indicate whether the operation was successfull or not.
 ```typescript
 interface State<T> { data: Array<{ [key: string]: T; }>; }
 
@@ -8,9 +8,9 @@ class MyStorage<T> {
     private state: State<T> = Object.freeze({ data: [] });
 
     getItem(key: string): T | null {  }
-    addItem(key: string, value: T): void { }
-    updateItem(key: string, value: T): void { }
-    removeItem(key: string): void { }
+    addItem(key: string, value: T): boolean { }
+    updateItem(key: string, value: T): boolean { }
+    removeItem(key: string): boolean { }
     getStorage() { return this.state; }
 }
 

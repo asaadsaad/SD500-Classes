@@ -8,15 +8,16 @@ class MyStorage<T> {
     private state: State<T> = Object.freeze({ data: [] });
 
     getItem(key: string): T | null {  }
-    setItem(key: string, value: T): void { }
+    addItem(key: string, value: T): void { }
+    updateItem(key: string, value: T): void { }
     removeItem(key: string): void { }
     getStorage() { return this.state; }
 }
 
 // Test with this code
 const storage = new MyStorage<string>();
-storage.setItem("firstname", "Asaad");
-storage.setItem("lastname", "Saad");
+storage.addItem("firstname", "Asaad");
+storage.addItem("lastname", "Saad");
 console.log(storage.getStorage()); // { data: [ { firstname: "Asaad" }, { lastname: "Saad" } ]}
 
 storage.removeItem("lastname");
